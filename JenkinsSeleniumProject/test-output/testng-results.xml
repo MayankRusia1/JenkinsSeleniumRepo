@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-07T14:56:30 IST" name="Suite" finished-at="2024-02-07T14:57:04 IST" duration-ms="33834">
+  <suite started-at="2024-02-07T15:32:53 IST" name="Suite" finished-at="2024-02-07T15:33:27 IST" duration-ms="33562">
     <groups>
     </groups>
-    <test started-at="2024-02-07T14:56:30 IST" name="Test" finished-at="2024-02-07T14:57:04 IST" duration-ms="33834">
+    <test started-at="2024-02-07T15:32:53 IST" name="Test" finished-at="2024-02-07T15:33:27 IST" duration-ms="33562">
       <class name="Textboxes.Test1">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Textboxes.Test1@576d5deb]" started-at="2024-02-07T14:56:31 IST" name="setup" finished-at="2024-02-07T14:56:50 IST" duration-ms="19478" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Textboxes.Test1@576d5deb]" started-at="2024-02-07T15:32:53 IST" name="setup" finished-at="2024-02-07T15:33:16 IST" duration-ms="22630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test()[pri:0, instance:Textboxes.Test1@576d5deb]" started-at="2024-02-07T14:56:50 IST" name="test" finished-at="2024-02-07T14:57:04 IST" duration-ms="13467" status="PASS">
+        <test-method signature="test()[pri:0, instance:Textboxes.Test1@576d5deb]" started-at="2024-02-07T15:33:16 IST" name="test" finished-at="2024-02-07T15:33:25 IST" duration-ms="8736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Textboxes.Test1@576d5deb]" started-at="2024-02-07T14:57:04 IST" name="teardown" finished-at="2024-02-07T14:57:04 IST" duration-ms="341" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Textboxes.Test1@576d5deb]" started-at="2024-02-07T15:33:25 IST" name="teardown" finished-at="2024-02-07T15:33:27 IST" duration-ms="2025" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,8 +22,8 @@ public class Test1
 	@BeforeMethod
 	public void setup()
 	{
-		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+		WebDriverManager.firefoxdriver().setup();
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("https://testautomationpractice.blogspot.com/");
 	}
@@ -30,7 +31,7 @@ public class Test1
 	@Test
 	public void test()
 	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));	
 		
 		WebElement name = driver.findElement(By.xpath("//input[@id='name']"));
 		name.sendKeys("Mayank Rusia");
@@ -106,46 +107,6 @@ public class Test1
 		driver.switchTo().alert().dismiss();
 		System.out.println("cancel is clicked");
 		System.out.println("Text obtained: "+text);
-		
-		
-		Actions actions = new Actions(driver);
-		
-		WebElement doubleclickbutton = driver.findElement(By.xpath("//button[normalize-space()='Copy Text']"));
-		actions.doubleClick(doubleclickbutton).build().perform();
-		System.out.println("Double click is done");
-		String text1 = driver.findElement(By.xpath("//input[@value='Hello World!']")).getText();
-		String text2 = driver.findElement(By.xpath("//div[@class='column-right-outer']//input[2]")).getText();
-		System.out.println("Text1: "+text1);
-		System.out.println("Text2: "+text2);
-		
-		WebElement dragbutton = driver.findElement(By.xpath("//div[@id='draggable']"));
-		WebElement dropbutton = driver.findElement(By.xpath("//div[@id='droppable']"));
-		actions.dragAndDrop(dragbutton, dropbutton).build().perform();
-		System.out.println("Dragged element is dropped inside drop area");
-
-/*		
-		JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
-
-		WebElement locatingelement1 = driver.findElement(By.xpath("//h2[normalize-space()='Frames']"));
-		WebElement sliderbutton = driver.findElement(By.xpath("//span[@class='ui-slider-handle ui-corner-all ui-state-default ui-state-hover']"));
-		jsExecutor.executeScript("document.arguments[0].scrollIntoView();", locatingelement1);
-		
-		actions.dragAndDropBy(sliderbutton, 20, 0).build().perform();
-		actions.dragAndDropBy(sliderbutton, 50, 0).build().perform();
-		actions.dragAndDropBy(sliderbutton, -30, 0).build().perform();
-		actions.dragAndDropBy(sliderbutton, 37, 0).build().perform();
-		System.out.println("Sliding operation done");
-
-		WebElement locatingelement2 = driver.findElement(By.xpath("//tbody/tr[1]/td[4]"));
-		WebElement resizablebutton = driver.findElement(By.xpath("//div[@class='ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se']"));
-		jsExecutor.executeScript("document.arguments[0].ScrollIntoView();", locatingelement2);
-		actions.dragAndDropBy(resizablebutton, 25, 120).build().perform();
-		actions.dragAndDropBy(resizablebutton, -25, 150).build().perform();
-		actions.dragAndDropBy(resizablebutton, 65, 200).build().perform();
-		actions.dragAndDropBy(resizablebutton, -15, 100).build().perform();
-		actions.dragAndDropBy(resizablebutton, -80, 20).build().perform();
-		System.out.println("Resizable operation done");
-*/		
 	}
 	
 	@AfterMethod
